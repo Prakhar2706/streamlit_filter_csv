@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 
 st.title("Simple Data Dashboard")
 
@@ -10,7 +9,10 @@ upload_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
 if upload_file is not None:
     try:
         # Read the uploaded Excel file
-        df = pd.read_excel(upload_file)
+        if upload_file.name.endswith('.xls'):
+            df = pd.read_excel(upload_file, engine='xlrd')
+        else:
+            df = pd.read_excel(upload_file)
         
         # Display Data Preview
         st.subheader("Data Preview")
