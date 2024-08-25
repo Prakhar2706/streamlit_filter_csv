@@ -5,20 +5,15 @@ import matplotlib.pyplot as plt
 st.title("Simple Data Dashboard")
 upload_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
 if upload_file is not None:
-    # st.write("File Uploaded Successfully...")
     df = pd.read_excel(upload_file)
     st.subheader("Data Preview")
     st.write(df.head())
-    # st.dataframe(df)
+    
     st.subheader("Data Summary")
     st.write(df.describe())
 
     st.subheader("Filter Data")
     columns = df.columns.tolist()
-    # selected_columns = st.multiselect("Select Columns to Filter by", columns)
-    # if selected_columns:
-    #     filtered_df = df[selected_columns]
-    #     st.write(filtered_df)
     selected_column = st.selectbox("Select Columns to Filter by", columns)
     unique_value = df[selected_column].unique()
     selected_value = st.selectbox("Select Values to Filter", unique_value)
