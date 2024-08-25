@@ -26,7 +26,12 @@ if upload_file is not None:
     y_column = st.selectbox("Select y_axis column to plot", columns)
     
     if st.button("Generate Plot"):
-        st.line_chart(filtered_df.set_index(x_column)[y_column])
+        fig, ax = plt.subplots()
+        ax.plot(filtered_df[x_column], filtered_df[y_column], marker='o')
+        ax.set_xlabel(x_column)
+        ax.set_ylabel(y_column)
+        ax.set_title(f"{y_column} vs {x_column}")
+        st.pyplot(fig)
 
 else:
     st.warning("Please upload an Excel file.")
