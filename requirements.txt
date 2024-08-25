@@ -2,3 +2,4 @@ streamlit
 matplotlib
 pandas
 openpyxl
+install xlrd==2.0.1
