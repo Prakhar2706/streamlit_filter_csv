@@ -3,10 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 st.title("Simple Data Dashboard")
-upload_file = st.file_uploader("Upload a CSV file", type="csv")
+upload_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
 if upload_file is not None:
     # st.write("File Uploaded Successfully...")
-    df = pd.read_csv(upload_file)
+    df = pd.read_excel(upload_file)
     st.subheader("Data Preview")
     st.write(df.head())
     # st.dataframe(df)
@@ -34,4 +34,4 @@ if upload_file is not None:
         st.line_chart(filtered_df.set_index(x_column)[y_column])
 
 else:
-    st.warning("Please upload a CSV file.")
+    st.warning("Please upload an Excel file.")
