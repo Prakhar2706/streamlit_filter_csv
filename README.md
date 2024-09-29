@@ -103,7 +103,8 @@ Here’s a screenshot of the dashboard interface:
 ![1](https://github.com/user-attachments/assets/25615d77-74e7-4da9-ba5d-911dfbacc81e)
 ![2](https://github.com/user-attachments/assets/5a34f510-ef44-49c1-bacd-6d41eb3a8b5c)
 ![3](https://github.com/user-attachments/assets/5a4cba9d-3969-44b6-9cd5-972e7d90ae31)
-![4](https://github.com/user-attachments/assets/af85f0c4-e95f-48d9-9c81-320a58310f40)
+![image](https://github.com/user-attachments/assets/b01f4ebc-b778-457e-a002-4c90602b0d35)
+
 
 ## Contributing 👥
 
