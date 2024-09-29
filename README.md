@@ -22,7 +22,7 @@ Make sure you have Python installed. You can download it [here](https://www.pyth
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/yourusername/simple-data-dashboard.git
+    git clone https://github.com/Prakhar2706/streamlit_filter_excel.git
     cd simple-data-dashboard
     ```
 
